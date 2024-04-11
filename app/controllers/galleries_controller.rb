@@ -22,7 +22,8 @@ class GalleriesController < ApplicationController
 
     def create
         @gallery = Gallery.new(gallery_params)
-        
+        @gallery.owner = current_user.id.to_s
+
         if @gallery.save
             redirect_to @gallery
         else
