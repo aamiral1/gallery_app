@@ -1,0 +1,8 @@
+<h1 class="text-center"> Welcome to The Gallery </h1>
+
+<% @galleries.each do |gallery| %>
+    <div>
+        <h4><%= link_to gallery.title, gallery_path(gallery), class: "link-opacity-100-hover" %></h4>
+        <%= gallery.description %>
+    </div>
+<% end %>
