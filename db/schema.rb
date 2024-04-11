@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_10_194528) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_11_170513) do
   create_table "galleries", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "owner"
   end
 
   create_table "users", force: :cascade do |t|

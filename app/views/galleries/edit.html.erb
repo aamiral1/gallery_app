@@ -2,4 +2,5 @@
 
 <%= render partial: "form", locals: {gallery: @gallery} %>
 
+<%= button_to "Back", gallery_path(@gallery.id), method: :get %>
 <%= button_to "Delete", @gallery, method: :delete, data: {turbo_confirm: "Are you sure?"} %>
