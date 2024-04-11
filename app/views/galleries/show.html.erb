@@ -1,2 +1,7 @@
 <h1><%= @gallery.title %></h1>
 <%= @gallery.description %>
+<br>
+<div class="d-flex justify_content_between">
+    <%= button_to "Back", galleries_path, method: :get, class: "btn btn-light px-2" %>
+    <%= button_to "Edit", edit_gallery_path(@gallery.id), method: :get, class: "btn btn-dark" %>
+</div>
